@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: mywebserver
   become: yes
   tasks:
   - name: i want to install web server on ansbile node
@@ -23,6 +23,6 @@
 
   - name: i want to start my webserver on RedHat ansbile nodes
     service:
-       name: httpd
+       name: httpds
        state: started
     when: ansible_os_family =="RedHat"
